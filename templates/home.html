@@ -1,0 +1,30 @@
+{% extends 'nav.html' %}
+{% block content %}
+{% load static %} 
+<style>
+    body {
+        background-image: url("{% static 'images/photo.jpeg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0; 
+    }
+    .container {
+        max-width: 800px;
+        margin: 10% auto;
+        text-align: right; /* Align the content to the right */
+    }
+    h1, p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(34, 32, 32); 
+        padding: 20px;
+        opacity: 0.9;
+        background-color: rgba(186, 240, 36, 0.8);
+        margin: 10px; /* Adjust margin as needed */
+    }
+</style>
+<div class="container">
+    <h1>Welcome to Course Hub</h1>
+    <p>Empowering Your Learning Journey. We are dedicated to fostering a culture of continuous learning and personal development. Our course offerings are thoughtfully designed to equip you with the knowledge and skills needed to thrive in today's dynamic world. Whether you're a professional looking to enhance your career or an enthusiast eager to explore new horizons, we have the perfect courses for you.</p>
+</div>
+{% endblock %}

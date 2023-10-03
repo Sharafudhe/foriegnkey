@@ -1,0 +1,52 @@
+{% extends 'nav.html' %}
+{% block content %}
+<form method="post" action="{% url 'coursedb' %}">
+    {% csrf_token %}
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+        }
+        .container {
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto; 
+            margin-top: 7%;
+            padding: 20px; 
+            border-radius: 20px;
+        }
+
+        h1{
+            text-transform: uppercase;
+            color: rgb(13, 14, 13);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        input {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px; 
+            border-radius: 10px;
+        }
+
+        button {
+            width: 25%; 
+            padding: 5px; 
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+        }
+        button:hover{
+            background-color: rgb(238, 219, 55);
+            border-color: rgb(213, 233, 56);
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <h1>Add Course</h1><br><br><br>
+        <input type="text" placeholder="Enter Course" name="course"><br><br><br>
+        <input type="number" placeholder="Enter Course Fee" name="fee"><br><br><br>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+{% endblock %}
